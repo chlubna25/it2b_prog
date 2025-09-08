@@ -2,7 +2,7 @@
 
 int main() {
 	int limit;
-	printf("Zadej vrchni limit vypisu: ");
+	printf("Zadej vrchni limit vypisu cisel: ");
 	scanf("%d", &limit);
 	
 	for (int i = 0; i < limit; i++) {
