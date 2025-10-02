@@ -1,11 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 int main() {
-      srand(42); 
+    srand(time(NULL)); // Použití aktuálního času jako seed
 
     // Generování náhodného čísla
-    int randomNumber = rand();
+    int randomNumber = (rand() % 100) + 1; // Náhodné číslo mezi 1 a 100
 
     printf("Náhodné číslo: %d\n", randomNumber);
 
