@@ -1,0 +1,13 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <string.h>
+
+int main() {
+    srand(time(NULL)); 
+
+    int randomNumber = (rand() % 6) + 1; // Náhodné číslo mezi 1 a 6 (hod kostkou)
+    printf("Padlo číslo: %d\n", randomNumber);
+
+    return 0;
+}

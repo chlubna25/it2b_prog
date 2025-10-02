@@ -6,7 +6,7 @@ int main() {
     srand(time(NULL)); // Použití aktuálního času jako seed
 
     // Generování náhodného čísla
-    int randomNumber = (rand() % 100) + 1; // Náhodné číslo mezi 1 a 100
+    int randomNumber = rand() % 100; // Náhodné číslo mezi 0 a 99
 
     printf("Náhodné číslo: %d\n", randomNumber);
 
