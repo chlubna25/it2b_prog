@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+        int pole[] = {10, 20, 30, 40, 50};
+        int velikost = 5;
+
+        srand(time(NULL));
+        int random = rand() % velikost;
+
+        printf("Nahodne vybrany prvek z pole: %d\n", pole[random]);
+
+    return 0;
+}
