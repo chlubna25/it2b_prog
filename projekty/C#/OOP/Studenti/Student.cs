@@ -1,33 +1,27 @@
-﻿public class Student
+﻿using System.Security.Cryptography;
+
+class Trida
 {
-    public string Jmeno { get; set; }
-    public int Vek { get; set; }
-    public string Trida { get; set; }
-
-    public List<int> Znamky;
+    public string Nazev {  get; set; }
+    public Ucitel Tridni { get; set; }
+    public Ucitel ZastupceTridniho { get; set; }
 
 
-    public Student(string jmeno, int vek, string trida)
+    public Trida(string nazev)
     {
-        Jmeno = jmeno;
-        Vek = vek;
-        Trida = trida;
-        Znamky = new List<int>();
-
+        Nazev = nazev;
+        Tridni = null;
     }
-    public void PridatZnamky(int novaZnamka)
+    public void PriradTridniho(Ucitel tridni)
     {
-        Znamky.Add(novaZnamka);
-    }
-    public void VypisZnamky()
-    {
-        Console.WriteLine("Znamky studenta:");
-        foreach (int z in Znamky)
+        if (Tridni != null)
         {
-            Console.WriteLine("    " + z);
-
+            Tridni.Tridnictvi = null;
+            Tridni.JeTridni = false;
         }
+
+        Tridni = tridni;
+        tridni.JeTridni = true;
+        tridni.Tridnictvi = this;      
     }
 }
-
-
