@@ -1,5 +1,6 @@
 class Program
 {
+<<<<<<< HEAD
     //simulace Bankovniho uctu
     static void Main()
     {
@@ -60,5 +61,24 @@ class Program
                     break;
             }
         }
+=======
+    static void Main()
+    {
+        Console.Write("Vytvor heslo: ");
+        string heslo = Console.ReadLine();
+
+        BankovniUcet mujUcet = new BankovniUcet(5000, heslo);
+        Console.WriteLine("Účet vytvořen se zůstatkem 5000 Kč.");
+
+        mujUcet.Vlozit(1000);
+
+        Console.Write("\nPro výběr peněz zadej heslo: ");
+        string pokusHeslo = Console.ReadLine();
+        mujUcet.Vybrat(2000, pokusHeslo);
+
+        Console.Write("\nPro výpis historie zadej heslo: ");
+        string hesloHistorie = Console.ReadLine();
+        mujUcet.VypisHistorii(hesloHistorie);
+>>>>>>> 5473a5883ad23272da0f94e2210fdb4d5016d1c6
     }
 }
